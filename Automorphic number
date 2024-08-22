@@ -1,0 +1,13 @@
+Automorphic number:
+Input : number = 5
+Output : It's an Automorphic number.
+Explanation : Number = 5 Square of number = 25 as the square of the number ends with the number itself, It's an Automorphic number.
+
+program:
+number = int(input())
+square = pow(number, 2)
+mod = pow(10, len(str(number)))
+if square % mod == number:
+    print("Automorphic Number")
+else:
+    print("not an Automorphic Number")
