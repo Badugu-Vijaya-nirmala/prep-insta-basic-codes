@@ -1,0 +1,24 @@
+Friendly Pair:
+Input : 6 28
+Output : Yes, they are a friendly pair
+Explanation : The factors of 6 and 28 except the numbers themselves are 1, 2, 3 and 1, 2, 4, 7, 14 respectively. 
+Now the sum of factors of both the numbers are 6 and 28 respectively. When we divide the sums with the numbers we get 1 and 1 respectively. 
+As the ratio of both the number match, they are considered as a friendly pair.
+
+program:
+n1 = int(input())
+n2 = int(input())
+sum1 = 0
+sum2 = 0
+for i in range(1, n1):
+    if n1 % i == 0:
+        sum1 += i
+for j in range(1, n2):
+    if n2 % j == 0:
+        sum2 += j
+a = sum1 / n1
+b = sum2 / n2
+if a == b:
+    print("Friendly Pairs")
+else:
+    print("Not Friendly Pairs")
